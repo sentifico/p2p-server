@@ -1,4 +1,5 @@
-app=require('express')()
+express=require('express')
+app=express()
 http=require('http').createServer(app)
 io=require('socket.io')(http)
 
