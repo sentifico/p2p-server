@@ -1,5 +1,5 @@
 m={}
-require("socket.io").listen(3000).on("connection",(socket)=>{
+require("socket.io").listen(process.env.PORT||3000).on("connection",(socket)=>{
   console.log("Peer connected.")
   socket.on("msg",(e)=>{
     m[Math.random()]=e.data
